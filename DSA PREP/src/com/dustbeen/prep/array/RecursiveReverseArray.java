@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class RecursiveReverseArray {
 	
-	private static int[] getInputformUser() {
+	protected static int[] getInputformUser() {
 		@SuppressWarnings("resource")
 		Scanner sc =new Scanner(System.in); 
 		System.out.println("Enter the size of the aaray :");
@@ -30,9 +30,13 @@ public class RecursiveReverseArray {
 	public static void main(String arrgs[]) {
 		int arr[]=getInputformUser();
 		int arrFinal[]=reverseTheArrayByRecusion(arr, 0, arr.length-1);
-		for(int i=0;i<arr.length;i++) {
+		printArray(arrFinal);
+	}
+
+	protected static void printArray(int[] arrFinal) {
+		for(int i=0;i<arrFinal.length;i++) {
 			System.out.println(arrFinal[i]+",");
-		}
+		}		
 	}
 }
 

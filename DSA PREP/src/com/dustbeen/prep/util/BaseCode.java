@@ -3,10 +3,9 @@ package com.dustbeen.prep.util;
 import java.util.Scanner;
 
 public class BaseCode {
-
+	@SuppressWarnings("resource")
+	static Scanner sc =new Scanner(System.in); 
 	protected static int[] getInputformUser() {
-		@SuppressWarnings("resource")
-		Scanner sc =new Scanner(System.in); 
 		System.out.println("Enter the size of the aaray :");
 		int n = sc.nextInt();
 		int arr[]=new int[n];
@@ -25,5 +24,10 @@ public class BaseCode {
 	protected static void printTwoValues(String firstString ,String secondString,String firstValue,String secondValue) {
 		System.out.println(firstString+firstValue);
 		System.out.println(secondString+secondValue);
+	}
+	protected static String takeInputforAValue(String stringForInput) {
+		System.out.println(" "+stringForInput+" ");
+		String inputvalue=sc.next();
+		return inputvalue;
 	}
 }
